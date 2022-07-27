@@ -9,4 +9,4 @@ The fully integrated plugin is here >> https://github.com/buzzibaer/FanPlugin.Wr
 Config of the Fan can be found here >> https://github.com/buzzibaer/FanPlugin.Wrapper#configuring-the-fan-to-static-ip
 
 ## Selecting a video file
-https://github.com/buzzibaer/FanPlugin.Test/blob/main/doc/2022-07-27%2010_07_23-Fan%20Test%20App.png
+![explain pic](https://github.com/buzzibaer/FanPlugin.Test/blob/main/doc/2022-07-27%2010_07_23-Fan%20Test%20App.png)
