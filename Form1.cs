@@ -67,5 +67,14 @@ namespace FanPlugin.Test
             tbLog.Clear();
             tbLog.AppendText(fan.playOldFromFan());
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FanPlugin.Wrapper.Fan fan = new Wrapper.Fan();
+
+            tbLog.Clear();
+            tbLog.AppendText(fan.selectSingleVideoPlaybackMode());
+
+        }
     }
 }
