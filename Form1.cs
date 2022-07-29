@@ -73,7 +73,7 @@ namespace FanPlugin.Test
             FanPlugin.Wrapper.Fan fan = new Wrapper.Fan();
 
             tbLog.Clear();
-            tbLog.AppendText(fan.selectSingleVideoPlaybackMode());
+            tbLog.AppendText(fan.selectLoopVideoPlaybackMode());
 
         }
     }
