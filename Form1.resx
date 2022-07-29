@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>You can select between:
+1. Only one Video will be played (if video reaches and the exact video starts over again)
+2. Loop through all Video files on your SD card of the fan. (e.g. if you are playing video 5 and it is reaching the end of the video no 6 will start)
+</value>
+  </data>
 </root>

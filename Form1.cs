@@ -76,5 +76,45 @@ namespace FanPlugin.Test
             tbLog.AppendText(fan.selectLoopVideoPlaybackMode());
 
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            // Check of the raiser of the event is a checked Checkbox.
+            // Of course we also need to to cast it first.
+            if (((RadioButton)sender).Checked)
+            {
+                // This is the correct control.
+                RadioButton rb = (RadioButton)sender;
+
+                FanPlugin.Wrapper.Fan fan = new Wrapper.Fan();
+
+                tbLog.Clear();
+                tbLog.AppendText(fan.selectSingleVideoPlaybackMode());
+                tbLog.AppendText("RadioButton Single Video Mode Selected");
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            // Check of the raiser of the event is a checked Checkbox.
+            // Of course we also need to to cast it first.
+            if (((RadioButton)sender).Checked)
+            {
+                // This is the correct control.
+                RadioButton rb = (RadioButton)sender;
+
+
+                FanPlugin.Wrapper.Fan fan = new Wrapper.Fan();
+
+                tbLog.Clear();
+                tbLog.AppendText(fan.selectLoopVideoPlaybackMode());
+                tbLog.AppendText("RadioButton Loop Video Mode Selected");
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
