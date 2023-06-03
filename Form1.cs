@@ -112,9 +112,22 @@ namespace FanPlugin.Test
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
+    
 
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FanPlugin.Wrapper.Fan fan = new Wrapper.Fan();
+
+            tbLog.Clear();
+            tbLog.AppendText(fan.sendPowerOn());
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            FanPlugin.Wrapper.Fan fan = new Wrapper.Fan();
+
+            tbLog.Clear();
+            tbLog.AppendText(fan.sendPowerOff());
         }
     }
 }

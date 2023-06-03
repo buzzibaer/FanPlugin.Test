@@ -40,9 +40,11 @@ namespace FanPlugin.Test
             this.button5 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -130,7 +132,6 @@ namespace FanPlugin.Test
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(150, 17);
             this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Stop Cycle through Videos";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
@@ -147,6 +148,16 @@ namespace FanPlugin.Test
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Video Options";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(15, 75);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(229, 100);
+            this.textBox2.TabIndex = 13;
+            this.textBox2.Text = resources.GetString("textBox2.Text");
+            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
@@ -158,16 +169,6 @@ namespace FanPlugin.Test
             this.radioButton2.Text = "Loop through all Videos";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(15, 75);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(229, 100);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.Text = resources.GetString("textBox2.Text");
             // 
             // groupBox2
             // 
@@ -181,11 +182,33 @@ namespace FanPlugin.Test
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Video Selection";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(539, 36);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(153, 23);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Turn Fan ON";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(539, 65);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(153, 23);
+            this.button6.TabIndex = 14;
+            this.button6.Text = "Turn Fan OFF";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 393);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button5);
@@ -220,6 +243,8 @@ namespace FanPlugin.Test
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
     }
 }
 
