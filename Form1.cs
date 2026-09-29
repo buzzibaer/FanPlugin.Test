@@ -35,9 +35,15 @@ namespace FanPlugin.Test
 
         private bool LogInputError(string message)
         {
-            tbLog.Clear();
-            tbLog.AppendText("Invalid configuration: " + message);
+            AppendLog("Invalid configuration: " + message);
             return false;
+        }
+
+        private void AppendLog(string message)
+        {
+            if (tbLog.TextLength > 0)
+                tbLog.AppendText(Environment.NewLine);
+            tbLog.AppendText(message);
         }
 
         private void RunV2(Func<FanPlugin.Wrapper.Fan, string> operation)
@@ -46,10 +52,9 @@ namespace FanPlugin.Test
             {
                 if (!ApplySettings("Fan V2", txtV2Ip, txtV2Port, txtV2ConnectTimeout, txtV2SocketTimeout,
                     (ip, port, connect, socket) => { if (fan == null) fan = new FanPlugin.Wrapper.Fan(); fan.ServerIp = ip; fan.ServerPort = port; fan.ConnectTimeoutMs = connect; fan.SocketTimeoutMs = socket; })) return;
-                tbLog.Clear();
-                tbLog.AppendText(operation(fan));
+                AppendLog(operation(fan));
             }
-            catch (Exception ex) { tbLog.Clear(); tbLog.AppendText("Fan V2 operation failed: " + ex.Message); }
+            catch (Exception ex) { AppendLog("Fan V2 operation failed: " + ex.Message); }
         }
 
         private void RunV3(Func<FanPlugin.Wrapper.FanV3, string> operation)
@@ -58,10 +63,9 @@ namespace FanPlugin.Test
             {
                 if (!ApplySettings("Fan V3", txtV3Ip, txtV3Port, txtV3ConnectTimeout, txtV3SocketTimeout,
                     (ip, port, connect, socket) => { if (fanV3 == null) fanV3 = new FanPlugin.Wrapper.FanV3(); fanV3.ServerIp = ip; fanV3.ServerPort = port; fanV3.ConnectTimeoutMs = connect; fanV3.SocketTimeoutMs = socket; })) return;
-                tbLog.Clear();
-                tbLog.AppendText(operation(fanV3));
+                AppendLog(operation(fanV3));
             }
-            catch (Exception ex) { tbLog.Clear(); tbLog.AppendText("Fan V3 operation failed: " + ex.Message); }
+            catch (Exception ex) { AppendLog("Fan V3 operation failed: " + ex.Message); }
         }
 
         private void button1_Click(object sender, EventArgs e) { RunV2(f => f.playVideoWithId(textBox1.Text)); }
@@ -83,10 +87,9 @@ namespace FanPlugin.Test
             {
                 if (!ApplySettings("Fan20320", txt20320Ip, txt20320Port, txt20320ConnectTimeout, txt20320SocketTimeout,
                     (ip, port, connect, socket) => { if (fan20320 == null) fan20320 = new FanPlugin.Wrapper.Fan20320(); fan20320.ServerIp = ip; fan20320.ServerPort = port; fan20320.ConnectTimeoutMs = connect; fan20320.SocketTimeoutMs = socket; })) return;
-                tbLog.Clear();
-                tbLog.AppendText(fan20320.playVideoWithId(txt20320VideoId.Text));
+                AppendLog(fan20320.playVideoWithId(txt20320VideoId.Text));
             }
-            catch (Exception ex) { tbLog.Clear(); tbLog.AppendText("Fan20320 operation failed: " + ex.Message); }
+            catch (Exception ex) { AppendLog("Fan20320 operation failed: " + ex.Message); }
         }
     }
 }
