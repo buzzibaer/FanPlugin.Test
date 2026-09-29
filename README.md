@@ -13,7 +13,9 @@ There more than one version of the Fan out there.
 They seam to be very similar, but...:)
 
 Just try out what kind of fan works for you.
-The test app has two diffenent sections.
+The tester has separate panels for Fan, FanV3, and Fan20320. Each panel has editable endpoint and timeout fields for that model.
+
+Controls differ by protocol, so Fan20320 only exposes playback. It plays `.bin` files that are already stored on the fan, selected by ID: for example, ID `5` plays `000005.bin`. The file list is obtained automatically; the tester does not upload files. Fan20320 has not been physically verified.
 
 ## Selecting a video file
 ![explain pic](https://github.com/buzzibaer/FanPlugin.Test/blob/main/doc/2023-11-25%2015_56_23-Fan%20Test%20App.png)
